@@ -1,6 +1,9 @@
 from telefones_br import TelefonesBr
 import re
 from cpf_cnpj import Documento
+from datetime import datetime, timedelta
+from date_time import DateTime
+
 
 cpf = '12354367996'
 
@@ -35,5 +38,16 @@ print(busca.group())
 teste_objeto = '551523462456'
 meu_numero = TelefonesBr(teste_objeto)
 print(meu_numero)
+
+data_cadastro = DateTime()
+print(data_cadastro)
+print(data_cadastro.mes_cadastro())
+print(data_cadastro.dia_semana())
+print(data_cadastro.tempo_cadastro())
+
+hoje = datetime.today()
+amanha = datetime.today() + timedelta(days=2, hours=5, minutes=30)
+
+print(amanha - hoje)
 
 

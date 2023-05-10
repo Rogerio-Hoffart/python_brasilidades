@@ -1,6 +1,6 @@
-from date_time import DateTime
+from acesso_cep import BuscaEndereco
 
-data_cadastro = DateTime()
-print(data_cadastro)
-print(data_cadastro.mes_cadastro())
-print(data_cadastro.dia_semana())
+cep = "18077412"
+objeto_cep = BuscaEndereco(cep)
+print(objeto_cep.acessa_via_cep())
+
